@@ -11,10 +11,7 @@ app.use(express.static('client'));
 const cors_app = require('cors');
 app.use(cors_app());
 
-/*Uncomment the following lines to loan the environment 
-variables that you set up in the .env file*/
-
-
+/*loan the environment variables that set up in the .env file*/
 dotenv.config();
 
 const api_key = process.env.API_KEY;
@@ -62,7 +59,7 @@ app.get("/url/emotion", (req,res) => {
         return res.send(analysisResults.result.keywords[0].emotion,null,2);
     })
     .catch(err => {
-        return res.send("Could not do desired operation "+err);
+        return res.send(err);
     });
 });
 
@@ -89,7 +86,7 @@ app.get("/url/sentiment", (req,res) => {
         return res.send(analysisResults.result.keywords[0].sentiment,null,2);
     })
     .catch(err => {
-        return res.send("Could not do desired operation "+err);
+        return res.send(err);
     });
 });
 
@@ -116,7 +113,7 @@ app.get("/text/emotion", (req,res) => {
         return res.send(analysisResults.result.keywords[0].emotion,null,2);
     })
     .catch(err => {
-        return res.send("Could not do desired operation "+err);
+        return res.send(err);
     });
 });
 
@@ -143,7 +140,7 @@ app.get("/text/sentiment", (req,res) => {
         return res.send(analysisResults.result.keywords[0].sentiment,null,2);
     })
     .catch(err => {
-        return res.send("Could not do desired operation "+err);
+        return res.send(err);
     });
 });
 

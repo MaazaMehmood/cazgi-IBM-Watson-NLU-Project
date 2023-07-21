@@ -1,7 +1,7 @@
 {
   "name": "sentimentanalyzeserver",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node and React IBM-NLP Project ",
   "main": "sentimentAnalyzerServer.js",
   "scripts": {
     "start": "node sentimentAnalyzerServer.js",
